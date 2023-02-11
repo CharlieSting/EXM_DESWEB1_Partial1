@@ -1,22 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="logic.js"></script>
-    <title>Examen DESWEB1 PART 1</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="logic.js"></script>
+  <title>Examen DESWEB1 PART 1</title>
 </head>
+
 <body>
 
-   <!--Nav bar-->
+  <!--Nav bar-->
 
-   <nav class="navbar navbar navbar-dark bg-dark">
+  <nav class="navbar navbar navbar-dark bg-dark">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">Examen DESWEB1 P1</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
@@ -54,309 +56,282 @@
     </div>
   </nav>
 
-<!--Mostrar cliente-->
+  <!--Mostrar cliente-->
 
-<div class="container mt-5" id="Divclientes" style="display: none;">
+  <div class="container mt-5" id="Divclientes" style="display: none;">
 
     <h2>Formulario para clientes</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
     <form id="form_cliente">
-        <div class="form-group">
-            <label for="Id">Id:</label>
-            <input type="text" class="form-control" id="id_cliente" name="id_cliente">
-          </div>
-          <div class="form-group">
-            <label for="Numero de identidad">Numero de identidad</label>
-            <input type="text" class="form-control" id="numero_identidad" name="numero_identidad" required>
-          </div>
-          <div class="form-group">
-            <label for="Nombre cliente">Nombre cliente</label>
-            <input type="text" class="form-control" id="nombre_cliente" name="nombre_cliente" required>
-          </div>
-          <div class="form-group">
-            <label for="Correo cliente">Correo electronico</label>
-            <input type="email" class="form-control" id="correo_cliente" name="correo_cliente" required>
-          </div>
-          <div class="form-group">
-            <label for="Direccion">Direccion</label>
-            <input type="text" class="form-control" id="direccion_cliente" name="direccion_cliente" required>
-          </div>
-          <div class="form-group">
-            <label for="Telefono">Numero telefono</label>
-            <input type="text" class="form-control" id="telefono_cliente" name="telefono_cliente" required>
-          </div>
-          <div class="form-group">
-            <label for="Id departamento">Id_departamento</label>
-            <input type="number" class="form-control" id="id_departamento_cliente" name="id_departamento_cliente" required>
-          </div>
-          <br>
-        <button type="button"   
-            onclick="insertarDatos_cliente()"
-          class="btn btn-primary">Insertar Datos</button>
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="id_cliente" name="id_cliente">
+      </div>
+      <div class="form-group">
+        <label for="Numero de identidad">Numero de identidad</label>
+        <input type="text" class="form-control" id="numero_identidad" name="numero_identidad" required>
+      </div>
+      <div class="form-group">
+        <label for="Nombre cliente">Nombre cliente</label>
+        <input type="text" class="form-control" id="nombre_cliente" name="nombre_cliente" required>
+      </div>
+      <div class="form-group">
+        <label for="Correo cliente">Correo electronico</label>
+        <input type="email" class="form-control" id="correo_cliente" name="correo_cliente" required>
+      </div>
+      <div class="form-group">
+        <label for="Direccion">Direccion</label>
+        <input type="text" class="form-control" id="direccion_cliente" name="direccion_cliente" required>
+      </div>
+      <div class="form-group">
+        <label for="Telefono">Numero telefono</label>
+        <input type="text" class="form-control" id="telefono_cliente" name="telefono_cliente" required>
+      </div>
+      <div class="form-group">
+        <label for="Id departamento">Id_departamento</label>
+        <input type="number" class="form-control" id="id_departamento_cliente" name="id_departamento_cliente" required>
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_cliente()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_cliente()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_cliente()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_cliente()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
-<br>
-      <table  class="table" id="reporteCliente">
+      <button type="button" onclick="borrarDatos_cliente()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+    <br>
+    <h2>Tabla de reporte de todos los clientes</h2>
+    <br>
+    <table class="table" id="reporteCliente">
 
-      </table>
-</div>
+    </table>
+  </div>
 
-<!--Mostrar departamentos-->
+  <!--Mostrar departamentos-->
 
-<div class="container mt-5" id="Divdepartamento" style="display: none;">
+  <div class="container mt-5" id="Divdepartamento" style="display: none;">
 
     <h2>Departamentos</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
     <form id="form_departamento">
-        <div class="form-group">
-            <label for="Id">Id:</label>
-            <input type="text" class="form-control" id="id_dept" name="id_dept">
-          </div>
-          <div class="form-group">
-            <label for="Departamento">Numero del Departamento</label>
-            <input type="text" class="form-control" id="departamento" name="departamento" required>
-          </div>
-        <br>
-          <button type="button"   
-            onclick="insertarDatos_departamento()"
-          class="btn btn-primary">Insertar Datos</button>
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="id_dept" name="id_dept">
+      </div>
+      <div class="form-group">
+        <label for="Departamento">Numero del Departamento</label>
+        <input type="text" class="form-control" id="departamento" name="departamento" required>
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_departamento()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_departamento()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_departamento()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_departamento()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
+      <button type="button" onclick="borrarDatos_departamento()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+<br>
+<h2>Tabla de reporte de Departamentos</h2>
+    <br>
+    <table class="table" id="reporteDepartamento">
 
-      <table  class="table" id="reporteDepartamento">
+    </table>
+  </div>
 
-      </table>
-</div>
+  <!--Mostrar administradores-->
 
-<!--Mostrar administradores-->
-
-<div class="container mt-5" id="Divadministrador" style="display: none;">
+  <div class="container mt-5" id="Divadministrador" style="display: none;">
 
     <h2> Administradores</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
     <form id="form_administrador">
-        <div class="form-group">
-            <label for="Id_administrador">Id:</label>
-            <input type="text" class="form-control" id="id_adm" name="id_adm">
-          </div>
-          <div class="form-group">
-            <label for="Nombre Administrador">Nombre del administrador</label>
-            <input type="text" class="form-control" id="nombre_administrador" name="nombre_administrador" required>
-          </div>
-          <div class="form-group">
-            <label for="Telefono administrador">Telefono del administrador</label>
-            <input type="text" class="form-control" id="telefono_administrador" name="telefono_administrador" required>
-          </div>
-          <div class="form-group">
-            <label for="Correo administrador">Correo del administrador</label>
-            <input type="text" class="form-control" id="correo_administrador" name="correo_administrador" required>
-          </div>
-        <br>
-          <button type="button"   
-            onclick="insertarDatos_administrador()"
-          class="btn btn-primary">Insertar Datos</button>
+      <div class="form-group">
+        <label for="Id_administrador">Id:</label>
+        <input type="text" class="form-control" id="id_adm" name="id_adm">
+      </div>
+      <div class="form-group">
+        <label for="Nombre Administrador">Nombre del administrador</label>
+        <input type="text" class="form-control" id="nombre_administrador" name="nombre_administrador" required>
+      </div>
+      <div class="form-group">
+        <label for="Telefono administrador">Telefono del administrador</label>
+        <input type="text" class="form-control" id="telefono_administrador" name="telefono_administrador" required>
+      </div>
+      <div class="form-group">
+        <label for="Correo administrador">Correo del administrador</label>
+        <input type="text" class="form-control" id="correo_administrador" name="correo_administrador" required>
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_administrador()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_administrador()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_administrador()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_administrador()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
+      <button type="button" onclick="borrarDatos_administrador()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+    <br>
+    <h2>Tabla de reporte de administradores</h2>
+    <br>
+    <table class="table" id="reporteAdministradores">
 
-      <table  class="table" id="reporteAdministradores">
+    </table>
+  </div>
 
-      </table>
-</div>
-
-<!--Mostrar prioridad-->
-<div class="container mt-5" id="Divprioridad" style="display: none;">
+  <!--Mostrar prioridad-->
+  <div class="container mt-5" id="Divprioridad" style="display: none;">
 
     <h2>La prioridad</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
     <form id="form_prioridad">
-        <div class="form-group">
-            <label for="Id">Id:</label>
-            <input type="text" class="form-control" id="id_prioridad" name="id_prioridad">
-          </div>
-          <div class="form-group">
-            <label for="Prioridad">Ingrese prioridad</label>
-            <input type="text" class="form-control" id="n_prioridad" name="n_prioridad" required>
-          </div>
-        <br>
-          <button type="button"   
-            onclick="insertarDatos_prioridad()"
-          class="btn btn-primary">Insertar Datos</button>
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="id_prioridad" name="id_prioridad">
+      </div>
+      <div class="form-group">
+        <label for="Prioridad">Ingrese prioridad</label>
+        <input type="text" class="form-control" id="n_prioridad" name="n_prioridad" required>
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_prioridad()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_prioridad()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_prioridad()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_prioridad()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
+      <button type="button" onclick="borrarDatos_prioridad()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+<br>
+    <h2>Tabla de reporte de prioridad</h2>
+    <br>
+    <table class="table" id="reportePrioridad">
 
-      <table  class="table" id="reportePrioridad">
+    </table>
+  </div>
 
-      </table>
-</div>
-
-<!--Mostrar estado-->
-<div class="container mt-5" id="Divestado" style="display: none;">
+  <!--Mostrar estado-->
+  <div class="container mt-5" id="Divestado" style="display: none;">
 
     <h2>El estado</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
-    <form id="form_prioridad">
-        <div class="form-group">
-            <label for="Id">Id:</label>
-            <input type="text" class="form-control" id="id_estado" name="id_estado">
-          </div>
-          <div class="form-group">
-            <label for="Estado">Ingrese el estado</label>
-            <input type="text" class="form-control" id="estado" name="estado" required>
-          </div>
-        <br>
-          <button type="button"   
-            onclick="insertarDatos_estado()"
-          class="btn btn-primary">Insertar Datos</button>
+    <form id="form_ESTADO">
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="id_estado" name="id_estado">
+      </div>
+      <div class="form-group">
+        <label for="Estado">Ingrese el estado</label>
+        <input type="text" class="form-control" id="estado" name="estado" required>
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_estado()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_estado()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_estado()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_estado()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
+      <button type="button" onclick="borrarDatos_estado()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+<br>
+    <h2>Tabla de reporte de todos estados</h2>
+    <br>
+    <table class="table" id="reporteEstado">
 
-      <table  class="table" id="reporteEstado">
+    </table>
+  </div>
 
-      </table>
-</div>
-
-<!--Mostrar administrador por ticket-->
-<div class="container mt-5" id="DivadmXticket" style="display: none;">
+  <!--Mostrar administrador por ticket-->
+  <div class="container mt-5" id="DivadmXticket" style="display: none;">
 
     <h2>Administrador por ticket</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
     <form id="form_admXticket">
-        <div class="form-group">
-            <label for="Id">Id:</label>
-            <input type="text" class="form-control" id="id_adm_ticket" name="id_adm_ticket">
-          </div>
-          <div class="form-group">
-            <label for="ID administrador">Ingrese el id del administrador</label>
-            <input type="text" class="form-control" id="id_ad" name="id_ad" required>
-          </div>
-          <div class="form-group">
-            <label for="ID del ticket">Ingrese el id del ticket</label>
-            <input type="text" class="form-control" id="id_ticket" name="id_ticket" required>
-          </div>
-        <br>
-          <button type="button"   
-            onclick="insertarDatos_admxticket()"
-          class="btn btn-primary">Insertar Datos</button>
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="id_adm_ticket" name="id_adm_ticket">
+      </div>
+      <div class="form-group">
+        <label for="ID administrador">Ingrese el id del administrador</label>
+        <input type="text" class="form-control" id="id_ad_ti" name="id_ad_ti" required>
+      </div>
+      <div class="form-group">
+        <label for="ID del ticket">Ingrese el id del ticket</label>
+        <input type="text" class="form-control" id="id_ticket_ad" name="id_ticket_ad" required>
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_admxticket()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_admxticket()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_admxticket()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_admxticket()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
+      <button type="button" onclick="borrarDatos_admxticket()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+<br>
+    <h2>Tabla de reporte de administradores por ticket</h2>
+    <br>
+    <table class="table" id="reporteAmdxticket">
 
-      <table  class="table" id="reporteAmdxticket">
+    </table>
+  </div>
 
-      </table>
-</div>
+  <!--Mostrar ticket-->
 
-<!--Mostrar ticket-->
-
-<div class="container mt-5" id="Divticket" style="display: none;">
+  <div class="container mt-5" id="Divticket" style="display: none;">
 
     <h2>Ticket</h2>
     <p>Por favor ingrese los datos solicitados</p>
 
     <form id="form_admXticket">
-        <div class="form-group">
-            <label for="Id">Id:</label>
-            <input type="text" class="form-control" id="id_ticket" name="id_ticket">
-          </div>
-          <div class="form-group">
-            <label for="Fecha del ticket">Ingrese fecha</label>
-            <input type="text" class="form-control" id="fecha_ticket" name="fecha_ticket" required>
-          </div>
-          <div class="form-group">
-            <label for="ID del estado">Ingrese el id del estado</label>
-            <input type="text" class="form-control" id="id_estado_fk" name="id_estado_fk" required>
-          </div>
-          <div class="form-group">
-            <label for="ID cliente">Ingrese el ID del cliente</label>
-            <input type="text" class="form-control" id="id_cliente_fk" name="id_cliente_fk" required>
-          </div>
-          <div class="form-group">
-            <label for="ID prioridad">Ingrese el ID de la prioridad</label>
-            <input type="text" class="form-control" id="id_prioridad_fk" name="id_prioridad_fk" required>
-          </div>
-          <div class="form-group">
-            <label for="Asunto ticket">Ingrese asunto</label>
-            <input type="text" class="form-control" id="asunto_ticket" name="asunto_ticket" required>
-          </div>
-          <div class="form-group">
-            <label for="Descripcion del ticket">Descripcion del ticket</label>
-            <input type="text" class="form-control" id="descripcion" name="descripcion" required>
-          </div>
-          <div class="form-group">
-            <label for="Solucion">Solucion</label>
-            <input type="text" class="form-control" id="solucion" name="solucion">
-          </div>
-        <br>
-          <button type="button"   
-            onclick="insertarDatos_ticket()"
-          class="btn btn-primary">Insertar Datos</button>
+      <div class="form-group">
+        <label for="Id">Id:</label>
+        <input type="text" class="form-control" id="id_ticket_fk" name="id_ticket_fk">
+      </div>
+      <div class="form-group">
+        <label for="Fecha del ticket">Ingrese fecha</label>
+        <input type="text" class="form-control" id="fecha_ticket" name="fecha_ticket" required>
+      </div>
+      <div class="form-group">
+        <label for="ID del estado">Ingrese el id del estado</label>
+        <input type="text" class="form-control" id="id_estado_fk" name="id_estado_fk" required>
+      </div>
+      <div class="form-group">
+        <label for="ID cliente">Ingrese el ID del cliente</label>
+        <input type="text" class="form-control" id="id_cliente_fk" name="id_cliente_fk" required>
+      </div>
+      <div class="form-group">
+        <label for="ID prioridad">Ingrese el ID de la prioridad</label>
+        <input type="text" class="form-control" id="id_prioridad_fk" name="id_prioridad_fk" required>
+      </div>
+      <div class="form-group">
+        <label for="Asunto ticket">Ingrese asunto</label>
+        <input type="text" class="form-control" id="asunto_ticket" name="asunto_ticket" required>
+      </div>
+      <div class="form-group">
+        <label for="Descripcion del ticket">Descripcion del ticket</label>
+        <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+      </div>
+      <div class="form-group">
+        <label for="Solucion">Solucion</label>
+        <input type="text" class="form-control" id="solucion" name="solucion">
+      </div>
+      <br>
+      <button type="button" onclick="insertarDatos_ticket()" class="btn btn-primary">Insertar Datos</button>
 
-          <button type="button"   
-            onclick="actualizarDatos_ticket()"
-          class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_ticket()" class="btn btn-warning">Actualizar Datos</button>
 
-          <button type="button"   
-            onclick="borrarDatos_ticket()"
-          class="btn btn-danger">Borrar Datos</button>
-      </form>
+      <button type="button" onclick="borrarDatos_ticket()" class="btn btn-danger">Borrar Datos</button>
+    </form>
+    <br>
+    <h2>Reporte de los tickets</h2>
+    <br>
+    <table class="table" id="reporteTicket">
 
-      <table  class="table" id="reporteTicket">
-
-      </table>
-</div>
+    </table>
+  </div>
 
 
-<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-<script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
     AOS.init();
   </script>
 </body>
 <script></script>
+
 </html>
