@@ -732,7 +732,7 @@ app.get('/api/administrador_ticket/', (req, res) => {
         database: "sistemTiketsDesweb1"
     });
 
-    let sql = "select * from tabla_administrador_ticket";
+    let sql = "select * from administrador_ticket";
 
     con.connect(function (err) {
 
@@ -761,7 +761,7 @@ app.post('/api/administrador_ticket/', (req, res) => {
         database: "sistemTiketsDesweb1"
     });
 
-    let sql = "insert into tabla_administrador_ticket" +
+    let sql = "insert into administrador_ticket" +
         "(id_administrador, id_ticket)" +
         "values (?, ?)";
     let parametros = [req.body.id_administrador, req.body.id_ticket];
@@ -792,7 +792,7 @@ app.put('/api/administrador_ticket/:id', (req, res) => {
         database: "sistemTiketsDesweb1"
     });
     
-    let sql = "update tabla_administrador_ticket set id_administrador = ?, id_ticket = ? where id = ?";
+    let sql = "update administrador_ticket set id_administrador = ?, id_ticket = ? where id = ?";
     let parametros = [req.body.id_administrador, req.body.id_ticket, req.params.id];
 
     con.connect(function (err) {
@@ -821,7 +821,7 @@ app.delete('/api/administrador_ticket/:id', (req, res) => {
         database: "sistemTiketsDesweb1"
     });
 
-    let sql = "delete from tabla_administrador_ticket where id = ?";
+    let sql = "delete from administrador_ticket where id = ?";
     let parametros = [req.params.id];
 
     con.connect(function (err) {
