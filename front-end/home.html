@@ -21,7 +21,7 @@
 
   <nav class="navbar navbar navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Examen DESWEB1 P1</a>
+      <a class="navbar-brand" href="#">Examen DESWEB1 P1 Carlos Martinez</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
         aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -94,11 +94,11 @@
         <input type="number" class="form-control" id="id_departamento_cliente" name="id_departamento_cliente" required>
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_cliente()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" id="BotonInsertar" onclick="insertarDatos_cliente()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_cliente()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_cliente()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_cliente()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_cliente()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
     <br>
     <h2>Tabla de reporte de todos los clientes</h2>
@@ -125,11 +125,11 @@
         <input type="text" class="form-control" id="departamento" name="departamento" required>
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_departamento()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" onclick="insertarDatos_departamento()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_departamento()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_departamento()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_departamento()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_departamento()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
 <br>
 <h2>Tabla de reporte de Departamentos</h2>
@@ -164,11 +164,11 @@
         <input type="text" class="form-control" id="correo_administrador" name="correo_administrador" required>
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_administrador()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" onclick="insertarDatos_administrador()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_administrador()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_administrador()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_administrador()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_administrador()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
     <br>
     <h2>Tabla de reporte de administradores</h2>
@@ -194,11 +194,11 @@
         <input type="text" class="form-control" id="n_prioridad" name="n_prioridad" required>
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_prioridad()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" onclick="insertarDatos_prioridad()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_prioridad()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_prioridad()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_prioridad()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_prioridad()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
 <br>
     <h2>Tabla de reporte de prioridad</h2>
@@ -224,11 +224,11 @@
         <input type="text" class="form-control" id="estado" name="estado" required>
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_estado()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" onclick="insertarDatos_estado()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_estado()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_estado()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_estado()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_estado()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
 <br>
     <h2>Tabla de reporte de todos estados</h2>
@@ -258,11 +258,11 @@
         <input type="text" class="form-control" id="id_ticket_ad" name="id_ticket_ad" required>
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_admxticket()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" onclick="insertarDatos_admxticket()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_admxticket()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_admxticket()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_admxticket()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_admxticket()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
 <br>
     <h2>Tabla de reporte de administradores por ticket</h2>
@@ -313,11 +313,11 @@
         <input type="text" class="form-control" id="solucion" name="solucion">
       </div>
       <br>
-      <button type="button" onclick="insertarDatos_ticket()" class="btn btn-primary">Insertar Datos</button>
+      <button type="button" onclick="insertarDatos_ticket()" class="btn btn-outline-success">Insertar Datos</button>
 
-      <button type="button" onclick="actualizarDatos_ticket()" class="btn btn-warning">Actualizar Datos</button>
+      <button type="button" onclick="actualizarDatos_ticket()" class="btn btn-outline-dark">Actualizar Datos</button>
 
-      <button type="button" onclick="borrarDatos_ticket()" class="btn btn-danger">Borrar Datos</button>
+      <button type="button" onclick="borrarDatos_ticket()" class="btn btn-outline-danger">Borrar Datos</button>
     </form>
     <br>
     <h2>Reporte de los tickets</h2>
@@ -327,14 +327,17 @@
     </table>
   </div>
 
-  <!--Footer-->
 
+
+
+  
+  <!--Footer-->
 <div class="container mt-5" data-aos="fade-up" id="--Footer--" style="display: block;">
   <footer class="bg-light text-center text-lg-start">
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
       © 2023 Copyright:
-      <a class="text-dark" href="https://github.com/CharlieSting/EXM_DESWEB1_Partial1.git">Carlos Martinez</a>
+      <a class="text-dark" href="https://github.com/CharlieSting/EXM_DESWEB1_Partial1.git">Carlos Enrique Martinez</a>
     </div>
     <!-- Copyright -->
   </footer>
