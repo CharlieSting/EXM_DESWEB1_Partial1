@@ -10,7 +10,7 @@ function mostrar_clientes() {
     $("#Divestado").hide(1000);
     $("#DivadmXticket").hide(1000);
     $("#Divticket").hide(1000);
-    cargarDatosCliente();
+    cargarDatosCliente().show(1000);
 }
 
 // mostrar departamentos con jquery
@@ -22,7 +22,7 @@ function mostrar_departamentos() {
     $("#Divestado").hide(1000);
     $("#DivadmXticket").hide(1000);
     $("#Divticket").hide(1000);
-    cargarDatosDepartamento();
+    cargarDatosDepartamento().show(1000);
 }
 
 // mostrar administradores con jquery
@@ -46,7 +46,7 @@ function mostrar_prioridades() {
     $("#Divestado").hide(1000);
     $("#DivadmXticket").hide(1000);
     $("#Divticket").hide(1000);
-    cargarDatosPrioridad();
+    cargarDatosPrioridad().show(1000);
 }
 
 // mostrar estados con jquery
@@ -58,7 +58,7 @@ function mostrar_estado() {
     $("#Divestado").show(1000);
     $("#DivadmXticket").hide(1000);
     $("#Divticket").hide(1000);
-    cargarDatosEstado();
+    cargarDatosEstado().show(1000);
 }
 
 // mostrar administradores por ticket con jquery
@@ -70,7 +70,7 @@ function mostrar_adm_ticket() {
     $("#Divestado").hide(1000);
     $("#DivadmXticket").show(1000);
     $("#Divticket").hide(1000);
-    cargarDatosAdministrador_ticket();
+    cargarDatosAdministrador_ticket().show(1000);
 }
 
 // mostrar tickets con jquery
@@ -82,7 +82,7 @@ function mostrar_tickets() {
     $("#Divestado").hide(1000);
     $("#DivadmXticket").hide(1000);
     $("#Divticket").show(1000);
-    cargarDatosTicket();
+    cargarDatosTicket().show(1000);
 }
 
 
