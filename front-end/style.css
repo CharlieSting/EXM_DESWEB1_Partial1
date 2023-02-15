@@ -177,3 +177,176 @@ footer{
 a{
     cursor: pointer;
 }
+
+ /* media query responsive */
+@media screen and (max-width: 768px){
+    #reporteCliente{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #Divclientes{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #Divdepartamento{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #reporteDepartamento{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #Divadministrador{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #reporteAdministradores{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #Divprioridad{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+    
+    #reportePrioridad{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #Divestado{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #reporteEstado{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #DivadmXticket{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #reporteAmdxticket{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #Divticket{
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    #reporteTicket{
+        width: 100%;
+        height: 100%;
+        background-color: #eae7c4;
+        padding: 20px;
+        margin: 0 auto;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+    }
+
+    h2{
+        font-size: 20px;
+        font-weight: 600;
+        color: #074a47;
+        margin: 0 0 20px;
+    }
+
+    footer{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 18px;
+        line-height: 1.5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+        background-color: #074a47;
+        
+    }
+
+    a{
+        cursor: pointer;
+    }
+
+}
